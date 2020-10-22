@@ -27,7 +27,7 @@ else
         echo "INVALID EMAIL"
 fi
 
-regex2="^([91]{2})+\s+([^0]{1}[0-9]{9})"
+regex2="^([91]{2})+\s+([^0]{1}[0-9]{9})+$"
 read -p "ENTER USER PHONE NUMBER" num
 if [[ $mail =~ $regex2 ]]
 then
