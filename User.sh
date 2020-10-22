@@ -17,6 +17,19 @@ else
 fi
 
 
+shopt -s extglob
+
+regex="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9])+\.)+([a-zA-Z])+$"
+
+read -p "ENTER USER EMAIL" mail
+if [[ $mail =~ $regex ]]
+then
+        echo "VALID"
+else
+        echo "INVALID EMAIL"
+fi
+
+
 
 
 
