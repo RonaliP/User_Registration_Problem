@@ -17,16 +17,23 @@ else
 fi
 
 
-shopt -s extglob
-
-regex="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9])+\.)+([a-zA-Z])+$"
+regex1="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9])+\.)+([a-zA-Z])+$"
 
 read -p "ENTER USER EMAIL" mail
-if [[ $mail =~ $regex ]]
+if [[ $mail =~ $regex1 ]]
 then
         echo "VALID"
 else
         echo "INVALID EMAIL"
+fi
+
+regex2="^([91]{2})+\s+([^0]{1}[0-9]{9})"
+read -p "ENTER USER PHONE NUMBER" num
+if [[ $mail =~ $regex2 ]]
+then
+        echo "VALID"
+else
+        echo "INVALID Number"
 fi
 
 
